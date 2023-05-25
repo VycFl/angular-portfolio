@@ -10,7 +10,7 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  imports: [HeaderComponent, FooterComponent, RouterOutlet ]
+  imports: [HeaderComponent, FooterComponent, RouterOutlet]
 })
 export class AppComponent {
   title = 'angular-portfolio';
