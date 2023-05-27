@@ -1,3 +1,17 @@
-<app-header />
-<router-outlet />
+<<mat-toolbar color="primary">
+    <button mat-icon-button (click)="sidenav.toggle()" class="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Victor's Website</span>
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" opened="false">
+        <a mat-button routerLink="/home">Home</a>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet />
+    </mat-sidenav-content>
+</mat-sidenav-container>>
+
 <app-footer />
