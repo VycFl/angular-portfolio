@@ -1,17 +1,23 @@
-<<mat-toolbar color="primary">
-    <button mat-icon-button (click)="sidenav.toggle()" class="menu">
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="sidenav.toggle()" fxHide fxShow.lt-md>
       <mat-icon>menu</mat-icon>
     </button>
     <span>Victor's Website</span>
+    <div fxShow fxHide.lt-md class="top-nav">
+        <a mat-button routerLink="/home">Home</a>
+        <a mat-button routerLink="/about">About</a>
+        <a mat-button routerLink="/contact">Contact</a>
+    </div>
 </mat-toolbar>
 
-<mat-sidenav-container class="example-container">
-    <mat-sidenav #sidenav mode="side" opened="false">
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="push" opened="false" class="side-nav" fxHide fxShow.lt-md>
         <a mat-button routerLink="/home">Home</a>
+        <a mat-button routerLink="/about">About</a>
+        <a mat-button routerLink="/contact">Contact</a>
     </mat-sidenav>
     <mat-sidenav-content>
         <router-outlet />
     </mat-sidenav-content>
-</mat-sidenav-container>>
-
+</mat-sidenav-container>
 <app-footer />
